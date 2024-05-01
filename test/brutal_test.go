@@ -4,8 +4,8 @@ import (
 	"net/netip"
 	"testing"
 
-	C "github.com/sagernet/sing-box/constant"
-	"github.com/sagernet/sing-box/option"
+	C "github.com/kelleygo/sing-box/constant"
+	"github.com/kelleygo/sing-box/option"
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 
 	"github.com/gofrs/uuid/v5"

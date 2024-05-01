@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/sagernet/sing-box/cmd/internal/build_shared"
-	"github.com/sagernet/sing-box/log"
+	"github.com/kelleygo/sing-box/cmd/internal/build_shared"
+	"github.com/kelleygo/sing-box/log"
 )
 
 func main() {

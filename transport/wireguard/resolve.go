@@ -6,8 +6,8 @@ import (
 	"encoding/hex"
 	"net/netip"
 
-	"github.com/sagernet/sing-box/adapter"
-	"github.com/sagernet/sing-box/option"
+	"github.com/kelleygo/sing-box/adapter"
+	"github.com/kelleygo/sing-box/option"
 	dns "github.com/sagernet/sing-dns"
 	E "github.com/sagernet/sing/common/exceptions"
 	M "github.com/sagernet/sing/common/metadata"

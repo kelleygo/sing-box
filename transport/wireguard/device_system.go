@@ -7,9 +7,9 @@ import (
 	"net/netip"
 	"os"
 
-	"github.com/sagernet/sing-box/adapter"
-	"github.com/sagernet/sing-box/common/dialer"
-	"github.com/sagernet/sing-box/option"
+	"github.com/kelleygo/sing-box/adapter"
+	"github.com/kelleygo/sing-box/common/dialer"
+	"github.com/kelleygo/sing-box/option"
 	"github.com/sagernet/sing-tun"
 	"github.com/sagernet/sing/common"
 	E "github.com/sagernet/sing/common/exceptions"

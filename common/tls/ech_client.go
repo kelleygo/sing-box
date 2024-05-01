@@ -13,9 +13,9 @@ import (
 	"os"
 	"strings"
 
+	"github.com/kelleygo/sing-box/adapter"
+	"github.com/kelleygo/sing-box/option"
 	cftls "github.com/sagernet/cloudflare-tls"
-	"github.com/sagernet/sing-box/adapter"
-	"github.com/sagernet/sing-box/option"
 	"github.com/sagernet/sing-dns"
 	E "github.com/sagernet/sing/common/exceptions"
 	"github.com/sagernet/sing/common/ntp"

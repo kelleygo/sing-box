@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/sagernet/sing-box"
+	"github.com/kelleygo/sing-box"
 	E "github.com/sagernet/sing/common/exceptions"
 	N "github.com/sagernet/sing/common/network"
 

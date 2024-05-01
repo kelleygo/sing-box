@@ -4,9 +4,9 @@ import (
 	"context"
 	"net"
 
-	"github.com/sagernet/sing-box/adapter"
-	C "github.com/sagernet/sing-box/constant"
-	"github.com/sagernet/sing-box/log"
+	"github.com/kelleygo/sing-box/adapter"
+	C "github.com/kelleygo/sing-box/constant"
+	"github.com/kelleygo/sing-box/log"
 	"github.com/sagernet/sing/common/control"
 	E "github.com/sagernet/sing/common/exceptions"
 	M "github.com/sagernet/sing/common/metadata"

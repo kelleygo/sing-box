@@ -5,9 +5,9 @@ import (
 	"os/user"
 	"strconv"
 
-	"github.com/sagernet/sing-box/common/humanize"
-	C "github.com/sagernet/sing-box/constant"
-	_ "github.com/sagernet/sing-box/include"
+	"github.com/kelleygo/sing-box/common/humanize"
+	C "github.com/kelleygo/sing-box/constant"
+	_ "github.com/kelleygo/sing-box/include"
 )
 
 var (
