@@ -1,4 +1,4 @@
-NAME = sing-box
+ NAME = sing-box
 COMMIT = $(shell git rev-parse --short HEAD)
 TAGS_GO118 = with_gvisor,with_dhcp,with_wireguard,with_reality_server,with_clash_api
 TAGS_GO120 = with_quic,with_utls
@@ -19,6 +19,9 @@ PREFIX ?= $(shell go env GOPATH)
 
 build:
 	go build $(MAIN_PARAMS) $(MAIN)
+
+build_win:
+        GOOS="windows" GOARCH="amd64" go build $(MAIN_PARAMS) $(MAIN)
 
 ci_build_go118:
 	go build $(PARAMS) $(MAIN)

@@ -12,6 +12,12 @@ https://sing-box.sagernet.org
 
 https://community.sagernet.org/c/sing-box/
 
+
+## proxy config
+
+- [tun2vmess_global](./test/config/tun2vmess_global.json)
+- [tun2vmess_speed](./test/config/tun2vmess_speed.json)
+
 ## License
 
 ```
@@ -33,3 +39,4 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 In addition, no derivative work may use the name or imply association
 with this application without prior consent.
 ```
+
