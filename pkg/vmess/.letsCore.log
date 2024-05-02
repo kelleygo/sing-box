@@ -1,0 +1,20 @@
+ERROR [255669604 2.30s] inbound/tun[0]: download: write tcp4 172.19.0.1:52853->172.19.0.2:10042: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [2716454158 1.92s] inbound/tun[0]: download: write tcp4 172.19.0.1:52853->172.19.0.2:10062: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [597953589 267ms] inbound/tun[0]: upload: raw-read tcp4 172.19.0.1:52853->172.19.0.2:10104: An existing connection was forcibly closed by the remote host.
+ERROR [3449826433 261ms] inbound/tun[0]: upload: raw-read tcp4 172.19.0.1:52853->172.19.0.2:10149: An existing connection was forcibly closed by the remote host.
+ERROR [1845577930 2m6s] inbound/tun[0]: upload: raw-read tcp4 172.19.0.1:52853->172.19.0.2:10136: An existing connection was forcibly closed by the remote host.
+ERROR [2374027288 2.93s] inbound/tun[0]: download: write tcp4 172.19.0.1:53748->172.19.0.2:10006: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [428926398 813ms] inbound/tun[0]: download: write tcp4 172.19.0.1:53748->172.19.0.2:10049: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [4279525607 792ms] inbound/tun[0]: download: write tcp4 172.19.0.1:53748->172.19.0.2:10050: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [4068320641 1.89s] inbound/tun[0]: download: write tcp4 172.19.0.1:53748->172.19.0.2:10027: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [2930666012 434ms] inbound/tun[0]: upload: raw-read tcp4 172.19.0.1:54442->172.19.0.2:10026: An existing connection was forcibly closed by the remote host.
+ERROR [3099405763 560ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10004: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [2980304735 558ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10009: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [3800273848 831ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10023: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [4080212389 844ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10022: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [3557607856 335ms] inbound/tun[0]: upload: raw-read tcp4 172.19.0.1:54888->172.19.0.2:10029: An existing connection was forcibly closed by the remote host.
+ERROR [454740483 541ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10050: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [1312519762 543ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10051: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [2927936671 548ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10052: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [902839011 557ms] inbound/tun[0]: download: write tcp4 172.19.0.1:54888->172.19.0.2:10053: wsasend: An established connection was aborted by the software in your host machine.
+ERROR [2168647105 242ms] inbound/tun[0]: upload: raw-read tcp4 172.19.0.1:54888->172.19.0.2:10085: An existing connection was forcibly closed by the remote host.
