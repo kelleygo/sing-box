@@ -153,10 +153,10 @@ func (this *vmessService) Close() error {
 }
 
 // NewVmessService
-// 运行模式，默认1 极速，2 全局模式
+// 运行模式，默认0 极速，1 全局模式
 func NewVmessService(runMode int, serviceAddr string, servicePort uint64, uuid string) pkg.Tun2VmessService {
 	vmessGlobalProxy := false
-	if runMode == 2 {
+	if runMode == 1 {
 		vmessGlobalProxy = true
 	}
 	return &vmessService{
