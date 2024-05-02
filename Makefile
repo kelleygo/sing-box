@@ -21,7 +21,7 @@ build:
 	go build $(MAIN_PARAMS) $(MAIN)
 
 build_win:
-        GOOS="windows" GOARCH="amd64" go build $(MAIN_PARAMS) $(MAIN)
+	 GOOS="windows" GOARCH="amd64" go build $(MAIN_PARAMS) $(MAIN)
 
 ci_build_go118:
 	go build $(PARAMS) $(MAIN)
