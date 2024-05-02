@@ -51,7 +51,7 @@ func ParseVmessGlobal(logPath string, serviceAddr string, servicePort uint64, uu
 	})
 }
 
-func (this *vmessService) create() (*box.Box, context.CancelFunc, error) {
+func (this *vmessService) create(ctx context.Context) (*box.Box, context.CancelFunc, error) {
 	var err error
 	var options option.Options
 	options, err = this.readConfigAndMerge()
@@ -59,7 +59,7 @@ func (this *vmessService) create() (*box.Box, context.CancelFunc, error) {
 		return nil, nil, E.Cause(err, "readConfigAndMerge")
 	}
 
-	ctx, cancel := context.WithCancel(context.TODO())
+	ctx, cancel := context.WithCancel(ctx)
 	var instance *box.Box
 	for retry := 0; retry < 3; retry++ {
 		instance, err = box.New(box.Options{
@@ -68,30 +68,18 @@ func (this *vmessService) create() (*box.Box, context.CancelFunc, error) {
 		})
 		if err != nil {
 			log.Warn(err)
+			time.Sleep(time.Second)
 			continue
 		}
+		break
 	}
 
 	if err != nil {
 		cancel()
 		return nil, nil, E.Cause(err, "create service")
 	}
-	osSignals := make(chan os.Signal, 1)
-	signal.Notify(osSignals, os.Interrupt, syscall.SIGTERM, syscall.SIGHUP)
-	defer func() {
-		signal.Stop(osSignals)
-		close(osSignals)
-	}()
-	startCtx, finishStart := context.WithCancel(context.Background())
-	go func() {
-		_, loaded := <-osSignals
-		if loaded {
-			cancel()
-			closeMonitor(startCtx)
-		}
-	}()
+
 	err = instance.Start()
-	finishStart()
 	if err != nil {
 		cancel()
 		return nil, nil, E.Cause(err, "start service")
@@ -127,17 +115,29 @@ func (this *vmessService) Start(ctx context.Context) error {
 	osSignals := make(chan os.Signal, 1)
 	signal.Notify(osSignals, os.Interrupt, syscall.SIGTERM, syscall.SIGHUP)
 	defer signal.Stop(osSignals)
+
 	for {
-		this.instance, this.cancel, err = this.create()
+		this.instance, this.cancel, err = this.create(ctx)
 		if err != nil {
 			return err
 		}
 		runtimeDebug.FreeOSMemory()
+		for {
+			osSignal := <-osSignals
+			if osSignal == syscall.SIGHUP {
+				err = this.check()
+				if err != nil {
+					log.Error(E.Cause(err, "reload service"))
+					continue
+				}
+			}
+			if osSignal != syscall.SIGHUP {
+				return nil
+			}
+			break
+		}
 		select {
 		case <-ctx.Done():
-			this.Close()
-			return nil
-		case <-osSignals:
 			this.Close()
 			return nil
 		}
@@ -145,11 +145,29 @@ func (this *vmessService) Start(ctx context.Context) error {
 }
 
 func (this *vmessService) Close() error {
+	this.cancel()
 	closeCtx, closed := context.WithCancel(context.Background())
 	go closeMonitor(closeCtx)
-	closed()
 	this.instance.Close()
+	closed()
 	return nil
+}
+
+func (this *vmessService) check() error {
+	options, err := this.readConfigAndMerge()
+	if err != nil {
+		return err
+	}
+	ctx, cancel := context.WithCancel(context.Background())
+	instance, err := box.New(box.Options{
+		Context: ctx,
+		Options: options,
+	})
+	if err == nil {
+		instance.Close()
+	}
+	cancel()
+	return err
 }
 
 // NewVmessService
