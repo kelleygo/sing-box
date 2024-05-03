@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	serviceAddr        = "38.77.232.6"
+	serviceAddr        = "3.77.232.6"
 	servicePort uint64 = 443
 	uuid               = "47b35bd5-7cfc-4687-a9ab-56e75e5881b8"
 	logPath            = ".letsCore.log"
@@ -30,14 +30,14 @@ func TestParseVmessGlobal(t *testing.T) {
 }
 
 func TestSpeedVmess(t *testing.T) {
-	var runMode int = 0
+	var runMode int = 1
 	service := NewVmessService(runMode, serviceAddr, servicePort, uuid)
 	err := service.Start(context.TODO())
 	t.Log(err)
 }
 
 func TestSpeedV2Vmess(t *testing.T) {
-	var runMode int = 0
+	var runMode int = 1
 	service := NewVmessService(runMode, serviceAddr, servicePort, uuid)
 	err := service.Create(context.TODO())
 	t.Log(err)
@@ -46,7 +46,7 @@ func TestSpeedV2Vmess(t *testing.T) {
 }
 
 func TestGlobalVmess(t *testing.T) {
-	var runMode int = 1
+	var runMode int = 0
 	service := NewVmessService(runMode, serviceAddr, servicePort, uuid)
 	err := service.Start(context.TODO())
 	t.Log(err)

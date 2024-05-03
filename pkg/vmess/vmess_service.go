@@ -180,10 +180,10 @@ func (this *vmessService) check() error {
 }
 
 // NewVmessService
-// 运行模式，默认0 极速，1 全局模式
+// 运行模式，默认0 全局模式，1极速模式
 func NewVmessService(runMode int, serviceAddr string, servicePort uint64, uuid string) pkg.Tun2VmessService {
 	vmessGlobalProxy := false
-	if runMode == 1 {
+	if runMode == 0 {
 		vmessGlobalProxy = true
 	}
 	return &vmessService{
