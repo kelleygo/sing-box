@@ -110,6 +110,15 @@ func (this *vmessService) readConfigAndMerge() (option.Options, error) {
 	return mergedOptions, nil
 }
 
+func (this *vmessService) Create(ctx context.Context) error {
+	var err error
+	this.instance, this.cancel, err = this.create(ctx)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 func (this *vmessService) Start(ctx context.Context) error {
 	var err error
 	osSignals := make(chan os.Signal, 1)

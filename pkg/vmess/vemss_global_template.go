@@ -5,7 +5,7 @@ var vmessGlobalTemplate = `{
         "disabled": false,
         "level": "error",
         "output": "{{ .logPath }}",
-        "timestamp": false
+        "timestamp": true
     },
     "dns": {
         "servers": [

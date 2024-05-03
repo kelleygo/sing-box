@@ -5,7 +5,7 @@ var vmessSpeedTemplate = `{
         "disabled": false,
         "level": "error",
         "output": "{{ .logPath }}",
-        "timestamp": false
+        "timestamp": true
     },
      "dns": {
         "servers": [

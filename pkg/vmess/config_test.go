@@ -6,10 +6,11 @@ import (
 	"net/netip"
 	"net/url"
 	"testing"
+	"time"
 )
 
 var (
-	serviceAddr        = "1.77.232.6"
+	serviceAddr        = "38.77.232.6"
 	servicePort uint64 = 443
 	uuid               = "47b35bd5-7cfc-4687-a9ab-56e75e5881b8"
 	logPath            = ".letsCore.log"
@@ -33,6 +34,15 @@ func TestSpeedVmess(t *testing.T) {
 	service := NewVmessService(runMode, serviceAddr, servicePort, uuid)
 	err := service.Start(context.TODO())
 	t.Log(err)
+}
+
+func TestSpeedV2Vmess(t *testing.T) {
+	var runMode int = 0
+	service := NewVmessService(runMode, serviceAddr, servicePort, uuid)
+	err := service.Create(context.TODO())
+	t.Log(err)
+
+	time.Sleep(time.Second * 30)
 }
 
 func TestGlobalVmess(t *testing.T) {
