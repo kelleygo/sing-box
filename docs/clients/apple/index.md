@@ -30,8 +30,8 @@ or join our Telegram group for sponsors from [@yet_another_sponsor_bot](https://
 brew install sfm
 ```
 
-* [GitHub Releases](https://github.com/SagerNet/sing-box/releases)
+* [GitHub Releases](https://github.com/kelleygo/sing-box/releases)
 
 ## :material-source-repository: Source code
 
-* [GitHub](https://github.com/SagerNet/sing-box-for-apple)
+* [GitHub](https://github.com/kelleygo/sing-box-for-apple)

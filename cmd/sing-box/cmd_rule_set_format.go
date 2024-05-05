@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/sagernet/sing-box/log"
-	"github.com/sagernet/sing-box/option"
+	"github.com/kelleygo/sing-box/log"
+	"github.com/kelleygo/sing-box/option"
 	E "github.com/sagernet/sing/common/exceptions"
 	"github.com/sagernet/sing/common/json"
 

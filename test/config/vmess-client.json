@@ -5,7 +5,7 @@
   "inbounds": [
     {
       "listen": "127.0.0.1",
-      "port": "1080",
+      "port": "1090",
       "protocol": "socks",
       "settings": {
         "auth": "noauth",
@@ -20,11 +20,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "127.0.0.1",
-            "port": 1234,
+            "address": "38.77.232.6",
+            "port": 443,
             "users": [
               {
-                "id": "",
+                "id": "47b35bd5-7cfc-4687-a9ab-56e75e5881b8",
                 "alterId": 0,
                 "security": "none",
                 "experiments": ""

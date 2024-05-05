@@ -5,12 +5,12 @@ import (
 	"io"
 	"os"
 
-	"github.com/sagernet/sing-box/adapter"
-	"github.com/sagernet/sing-box/common/srs"
-	C "github.com/sagernet/sing-box/constant"
-	"github.com/sagernet/sing-box/log"
-	"github.com/sagernet/sing-box/option"
-	"github.com/sagernet/sing-box/route"
+	"github.com/kelleygo/sing-box/adapter"
+	"github.com/kelleygo/sing-box/common/srs"
+	C "github.com/kelleygo/sing-box/constant"
+	"github.com/kelleygo/sing-box/log"
+	"github.com/kelleygo/sing-box/option"
+	"github.com/kelleygo/sing-box/route"
 	E "github.com/sagernet/sing/common/exceptions"
 	"github.com/sagernet/sing/common/json"
 

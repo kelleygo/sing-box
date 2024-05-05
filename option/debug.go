@@ -1,7 +1,7 @@
 package option
 
 import (
-	"github.com/sagernet/sing-box/common/humanize"
+	"github.com/kelleygo/sing-box/common/humanize"
 	"github.com/sagernet/sing/common/json"
 )
 

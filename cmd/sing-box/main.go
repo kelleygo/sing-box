@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	_ "github.com/sagernet/sing-box/include"
-	"github.com/sagernet/sing-box/log"
+	_ "github.com/kelleygo/sing-box/include"
+	"github.com/kelleygo/sing-box/log"
 	"github.com/sagernet/sing/service/filemanager"
 
 	"github.com/spf13/cobra"

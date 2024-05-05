@@ -1,4 +1,4 @@
-NAME = sing-box
+ NAME = sing-box
 COMMIT = $(shell git rev-parse --short HEAD)
 TAGS_GO118 = with_gvisor,with_dhcp,with_wireguard,with_reality_server,with_clash_api
 TAGS_GO120 = with_quic,with_utls
@@ -10,7 +10,7 @@ GOHOSTOS = $(shell go env GOHOSTOS)
 GOHOSTARCH = $(shell go env GOHOSTARCH)
 VERSION=$(shell CGO_ENABLED=0 GOOS=$(GOHOSTOS) GOARCH=$(GOHOSTARCH) go run ./cmd/internal/read_tag)
 
-PARAMS = -v -trimpath -ldflags "-X 'github.com/sagernet/sing-box/constant.Version=$(VERSION)' -s -w -buildid="
+PARAMS = -v -trimpath -ldflags "-X 'github.com/kelleygo/sing-box/constant.Version=$(VERSION)' -s -w -buildid="
 MAIN_PARAMS = $(PARAMS) -tags $(TAGS)
 MAIN = ./cmd/sing-box
 PREFIX ?= $(shell go env GOPATH)
@@ -19,6 +19,9 @@ PREFIX ?= $(shell go env GOPATH)
 
 build:
 	go build $(MAIN_PARAMS) $(MAIN)
+
+build_win:
+	 GOOS="windows" GOARCH="amd64" go build $(MAIN_PARAMS) $(MAIN)
 
 ci_build_go118:
 	go build $(PARAMS) $(MAIN)

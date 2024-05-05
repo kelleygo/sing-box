@@ -3,8 +3,8 @@ package route
 import (
 	"strings"
 
-	"github.com/sagernet/sing-box/adapter"
-	"github.com/sagernet/sing-box/option"
+	"github.com/kelleygo/sing-box/adapter"
+	"github.com/kelleygo/sing-box/option"
 	"github.com/sagernet/sing/common"
 )
 

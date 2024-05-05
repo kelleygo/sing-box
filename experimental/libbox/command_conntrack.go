@@ -6,7 +6,7 @@ import (
 	runtimeDebug "runtime/debug"
 	"time"
 
-	"github.com/sagernet/sing-box/common/conntrack"
+	"github.com/kelleygo/sing-box/common/conntrack"
 )
 
 func (c *CommandClient) CloseConnections() error {

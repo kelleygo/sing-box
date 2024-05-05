@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	C "github.com/sagernet/sing-box/constant"
-	"github.com/sagernet/sing-box/option"
-	"github.com/sagernet/sing-box/transport/vless"
+	C "github.com/kelleygo/sing-box/constant"
+	"github.com/kelleygo/sing-box/option"
+	"github.com/kelleygo/sing-box/transport/vless"
 
 	"github.com/gofrs/uuid/v5"
 	"github.com/spyzhov/ajson"

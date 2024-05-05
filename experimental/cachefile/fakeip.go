@@ -5,9 +5,9 @@ import (
 	"os"
 	"time"
 
+	"github.com/kelleygo/sing-box/adapter"
+	C "github.com/kelleygo/sing-box/constant"
 	"github.com/sagernet/bbolt"
-	"github.com/sagernet/sing-box/adapter"
-	C "github.com/sagernet/sing-box/constant"
 	"github.com/sagernet/sing/common/logger"
 	M "github.com/sagernet/sing/common/metadata"
 )
